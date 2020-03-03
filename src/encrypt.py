@@ -1,4 +1,3 @@
-''' Example of code using high level of encryption.'''
 from cryptograph.fernet import fernet
 import gpg
 
