@@ -9,7 +9,6 @@ plain_text = cipher_suite.decrypt(cipher_text)
 # Using a function based to run it
 
 def high_level_encryption():
-	""Use the high level encrypt.""
 	key = Fernet.generate_key()
 	cipher_suite = Fernet(key)
 	cipher_text = cipher_suite.encrypt(b"A random message not so prodound.")
