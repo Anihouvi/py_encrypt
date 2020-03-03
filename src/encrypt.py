@@ -1,4 +1,4 @@
-from cryptograph.fernet import fernet
+from cryptograph.fernet import Fernet
 import gpg
 
 key = Fernet.generate_key()
