@@ -36,10 +36,10 @@ with open("{0}.asc".format(filename), "wb") as bfile:
 	#Decryption with corresponding secret key
 	#Invokes gpg-agent and pinentry.
 with open("new-{0}".format(filename), "wb") as dfile:
-	dfile.write(plaintext)
+	dfile.write(ciphertext)
 # Matching the data.
 # Also running a diff on filename and the new filename should match.
-if text == plaintext:
+if text == ciphertext:
 	print("Hang on ... did you say *all* of GnuPG? Yep.")
 else:
 	pass
