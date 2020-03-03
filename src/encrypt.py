@@ -1,5 +1,4 @@
-''' Example of code using high level of encryption.'''
-from cryptograph.fernet import fernet
+from cryptography.fernet import Fernet
 import gpg
 
 key = Fernet.generate_key()
@@ -10,7 +9,6 @@ plain_text = cipher_suite.decrypt(cipher_text)
 # Using a function based to run it
 
 def high_level_encryption():
-	""Use the high level encrypt.""
 	key = Fernet.generate_key()
 	cipher_suite = Fernet(key)
 	cipher_text = cipher_suite.encrypt(b"A random message not so prodound.")
@@ -38,10 +36,10 @@ with open("{0}.asc".format(filename), "wb") as bfile:
 	#Decryption with corresponding secret key
 	#Invokes gpg-agent and pinentry.
 with open("new-{0}".format(filename), "wb") as dfile:
-	dfile.write(plaintext)
+	dfile.write(ciphertext)
 # Matching the data.
 # Also running a diff on filename and the new filename should match.
-if text == plaintext:
+if text == ciphertext:
 	print("Hang on ... did you say *all* of GnuPG? Yep.")
 else:
 	pass
