@@ -1,6 +1,6 @@
 attrs==19.3.0
 cffi==1.14.0
-cryptography==2.8
+cryptography==3.2
 entrypoints==0.3
 flake8==3.7.9
 gnupg==2.3.1
